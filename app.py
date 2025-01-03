@@ -34,11 +34,11 @@ def upload_file():
                 bucket_name,
                 f"images/{filename}"
             )
-image_url = f"https://{bucket_name}.s3.amazonaws.com/images/{filename}"
+            image_url = f"https://{bucket_name}.s3.amazonaws.com/images/{filename}"
             return f"File uploaded successfully! <a href='{image_url}'>View Image</a>"
         except Exception as e:
             return f"Error uploading file: {str(e)}"
     return "Invalid file format or no file selected."
  
 if __name__ == "__main__":
-app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5000)
