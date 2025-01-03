@@ -1,9 +1,15 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Blog</title>
+    <title>Upload File</title>
 </head>
 <body>
-    <h1>Welcome to the Blog</h1>
-    <a href="/create_post">Create New Post</a>
+    <h1>Upload a File</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <a href="/files">View Uploaded Files</a>
 </body>
 </html>
